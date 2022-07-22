@@ -16,6 +16,8 @@ namespace Shopping_App.Models
         public string icon { get; set; }
         public string Description { get; set; }
 
+        public int Code { get; set; }
+
 
     }
 }

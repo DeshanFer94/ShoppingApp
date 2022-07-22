@@ -3,13 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Shopping_App.Views.AddItemView"
              Title="Add new Item">
-    <VerticalStackLayout Margin="30,0">
-        <VerticalStackLayout Spacing="20">
-            <Entry Margin="0,40,0,20" Text="{Binding ItemCode}" Placeholder="Enter Item Name"/>
-            <Entry Margin="0,40,0,20" Text="{Binding ItemCode}" Placeholder="Enter Item Description"/>
-            <Entry Margin="0,40,0,20" Text="{Binding ItemCode}" Placeholder="Enter Item Price"/>
+    <Grid>
+        <VerticalStackLayout Margin="30,0">
+            <VerticalStackLayout Spacing="20">
+                <Entry Margin="0,40,0,20" Text="{Binding ItemName}" Placeholder="Enter Item Name"/>
+                <Entry Margin="0,40,0,20" Text="{Binding ItemDescription}" Placeholder="Enter Item Description"/>
+                <Entry Margin="0,40,0,20" Text="{Binding ItemPrice}" Placeholder="Enter Item Price"/>
 
-            <Button Text="Save" Command="{Binding SaveItem}"/>
+                <Button Text="Save" Command="{Binding SaveItemCommand}"/>
+            </VerticalStackLayout>
         </VerticalStackLayout>
-    </VerticalStackLayout>
+
+        <BoxView Color="White" Opacity="0.5" IsVisible="{Binding IsBusy}" VerticalOptions="Fill" HorizontalOptions="Fill">
+
+        </BoxView>
+    </Grid>
 </ContentPage>

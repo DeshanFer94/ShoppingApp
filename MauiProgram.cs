@@ -19,14 +19,19 @@ public static class MauiProgram
 				prism.RegisterTypes(container =>
 				{
 					container.Register<IShoppingCartItemService, ShoppingCartItemService>();
+					container.Register<IAddItemsService, AddItemsService>();
 					container.RegisterForNavigation<ItemView, ItemViewModel>();
+					container.RegisterForNavigation<AddItemView, AddItemViewModel>();
                 })
 				.ConfigureServices(service =>
 				{
-					service.AddRestEaseClient<IShoppingCartApiService>("http://sampleshopping.azurewebsites.net/ShoppingCart");
+					// service.AddRestEaseClient<IShoppingCartApiService>("http://sampleshopping.azurewebsites.net");
+					service.AddRestEaseClient<IAddItemsAPIService>("http://sampleshopping.azurewebsites.net");
 				})
-				.OnAppStart(navigation => navigation.CreateBuilder().AddNavigationPage().AddSegment<ItemViewModel>().Navigate());
-			})
+                //.OnAppStart(navigation => navigation.CreateBuilder().AddNavigationPage().AddSegment<ItemViewModel>().Navigate());
+                .OnAppStart(navigation => navigation.CreateBuilder().AddNavigationPage().AddSegment<AddItemViewModel>().Navigate());
+
+            })
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
