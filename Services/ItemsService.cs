@@ -20,9 +20,17 @@ namespace Shopping_App.Services
 
                     
         }
+
+        public async Task<ResponseBase<List<ShoppingCartItem>>> GetItemList()
+        {
+            return await _addItemsAPIService.GetItemList();
+        }
+
         public ItemsService(IItemsAPIService addItemsAPISevice)
         {
             _addItemsAPIService = addItemsAPISevice;
         }
+
+        
     }
 }

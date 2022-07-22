@@ -10,6 +10,8 @@ namespace Shopping_App.Services.Abstractions
     public interface IItemsService
     {
         Task<ResponseBase<ShoppingCartItem>> setItems(ShoppingCartItem shoppingCartItem);
+
+        Task<ResponseBase<List<ShoppingCartItem>>> GetItemList();
     }
 
    
