@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shopping_App.Services.Abstractions
 {
-    public interface IAddItemsService
+    public interface IItemsService
     {
         Task<ResponseBase<ShoppingCartItem>> setItems(ShoppingCartItem shoppingCartItem);
     }
+
+   
 }

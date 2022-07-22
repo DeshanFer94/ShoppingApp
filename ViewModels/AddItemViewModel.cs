@@ -13,7 +13,7 @@ namespace Shopping_App.ViewModels
 {
     public partial class AddItemViewModel : ObservableObject
     {
-        IAddItemsService _addItemService;
+        IItemsService _addItemService;
         IPageDialogService _pageDialogService;
 
 
@@ -53,7 +53,7 @@ namespace Shopping_App.ViewModels
 
         }
 
-        public AddItemViewModel(IAddItemsService addItemsService, IPageDialogService pageDialogService)
+        public AddItemViewModel(IItemsService addItemsService, IPageDialogService pageDialogService)
         {
             _addItemService = addItemsService;
             _pageDialogService = pageDialogService;

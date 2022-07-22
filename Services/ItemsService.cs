@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Shopping_App.Services
 {
-    public class AddItemsService : IAddItemsService
+    public class ItemsService : IItemsService
     {
-        IAddItemsAPIService _addItemsAPIService;
+        IItemsAPIService _addItemsAPIService;
         
        
        public async Task<ResponseBase<ShoppingCartItem>> setItems(ShoppingCartItem shoppingCartItem)
@@ -20,7 +20,7 @@ namespace Shopping_App.Services
 
                     
         }
-        public AddItemsService(IAddItemsAPIService addItemsAPISevice)
+        public ItemsService(IItemsAPIService addItemsAPISevice)
         {
             _addItemsAPIService = addItemsAPISevice;
         }

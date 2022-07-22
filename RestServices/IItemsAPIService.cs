@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Shopping_App.RestServices
 {
     [Header("User-Agent", "RestEase")]
-    public interface IAddItemsAPIService
+    public interface IItemsAPIService
     {
         [Post("/Item/AddItem")]
 
