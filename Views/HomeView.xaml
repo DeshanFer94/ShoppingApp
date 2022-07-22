@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shopping_App.Views.HomeView"
+             Title="Home View">
+    <VerticalStackLayout>
+        <Label 
+            Text="Home Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Add Item" Command="{Binding AddItemCommand}"/>
+        <Button Text="Items View" Command="{Binding GetItemCommand}"/>
+    </VerticalStackLayout>
+</ContentPage>

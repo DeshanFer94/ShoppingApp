@@ -18,10 +18,14 @@ public static class MauiProgram
 			{
 				prism.RegisterTypes(container =>
 				{
-					container.Register<IShoppingCartItemService, ShoppingCartItemService>();
+					
+                    
+                    container.Register<IShoppingCartItemService, ShoppingCartItemService>();
 					container.Register<IItemsService, ItemsService>();
 					container.RegisterForNavigation<ItemView, ItemViewModel>();
-					container.RegisterForNavigation<AddItemView, AddItemViewModel>();
+					container.RegisterForNavigation<AddItemView, AddItemViewModel>("AddItemPage");
+                    container.RegisterForNavigation<GetItemView, GetItemsViewModel>("GetItemsPage");
+                    container.RegisterForNavigation<HomeView, HomeViewModel>();
                 })
 				.ConfigureServices(service =>
 				{
@@ -29,7 +33,7 @@ public static class MauiProgram
 					service.AddRestEaseClient<IItemsAPIService>("http://sampleshopping.azurewebsites.net");
 				})
                 //.OnAppStart(navigation => navigation.CreateBuilder().AddNavigationPage().AddSegment<ItemViewModel>().Navigate());
-                .OnAppStart(navigation => navigation.CreateBuilder().AddNavigationPage().AddSegment<AddItemViewModel>().Navigate());
+                .OnAppStart(navigation => navigation.CreateBuilder().AddNavigationPage().AddSegment<HomeViewModel>().Navigate());
 
             })
             .ConfigureFonts(fonts =>
