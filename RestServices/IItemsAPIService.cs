@@ -18,8 +18,8 @@ namespace Shopping_App.RestServices
         [Get("/Item/Get")]
         Task<ResponseBase<List<ShoppingCartItem>>> GetItemList();
 
-        [Post("/Item/DeleteItem")]
-        Task<ResponseBase<int>> DeleteItem([Body] int ItemCode);
+        [Get("/Item/DeleteItem/{ItemCode}")]
+        Task<ResponseBase<int>> DeleteItem([Path] int ItemCode);
 
     }
 }

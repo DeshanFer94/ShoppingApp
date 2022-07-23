@@ -12,6 +12,10 @@ namespace Shopping_App.Services.Abstractions
         Task<ResponseBase<ShoppingCartItem>> setItems(ShoppingCartItem shoppingCartItem);
 
         Task<ResponseBase<List<ShoppingCartItem>>> GetItemList();
+
+        Task<ResponseBase<int>> DeleteItem(int ItemCode);
+
+        
     }
 
    

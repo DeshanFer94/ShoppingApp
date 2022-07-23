@@ -59,6 +59,9 @@
 	  <MauiXaml Update="Views\AddItemView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\DeleteItemView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\GetItemView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

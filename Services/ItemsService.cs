@@ -26,6 +26,12 @@ namespace Shopping_App.Services
             return await _addItemsAPIService.GetItemList();
         }
 
+        public async Task<ResponseBase<int>> DeleteItem(int ItemCode)
+        {
+
+            return await _addItemsAPIService.DeleteItem(ItemCode);
+        }
+
         public ItemsService(IItemsAPIService addItemsAPISevice)
         {
             _addItemsAPIService = addItemsAPISevice;

@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Prism.Navigation;
 using Shopping_App.Models;
 using Shopping_App.Services.Abstractions;
@@ -37,6 +38,12 @@ namespace Shopping_App.ViewModels
             Items = new ObservableCollection<ShoppingCartItem>(response.Value);
 
          }
+
+        [RelayCommand]
+        public void DeleteItem(ShoppingCartItem item)
+        {
+
+        }
 
         public void OnNavigatedFrom(INavigationParameters parameters)
         {

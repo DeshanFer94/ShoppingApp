@@ -19,12 +19,17 @@ namespace Shopping_App.ViewModels
         [RelayCommand]
         public void AddItem()
         {
-            _navigationService.CreateBuilder().AddSegment<AddItemViewModel>().Navigate();
+            _navigationService.NavigateAsync("AddItemPage");
         }
         [RelayCommand]
         public void GetItem()
         {
             _navigationService.NavigateAsync("GetItemsPage");
+        }
+        [RelayCommand]
+        public void DeleteItemView()
+        {
+            _navigationService.NavigateAsync("ItemDeletePage");
         }
     }
 }

@@ -12,6 +12,6 @@
             <Label HorizontalOptions="Center" FontSize="20" Text="{Binding Name}" FontAttributes="Bold"/>
             <Label HorizontalOptions="Center" Text="{Binding Price,StringFormat='Rs.{0}/='}"/>
             <Label HorizontalOptions="Center" Text="{Binding Description}"/>
-        </VerticalStackLayout>
+                    </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

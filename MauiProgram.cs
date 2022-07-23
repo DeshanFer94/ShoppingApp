@@ -25,6 +25,7 @@ public static class MauiProgram
 					container.RegisterForNavigation<ItemView, ItemViewModel>();
 					container.RegisterForNavigation<AddItemView, AddItemViewModel>("AddItemPage");
                     container.RegisterForNavigation<GetItemView, GetItemsViewModel>("GetItemsPage");
+					container.RegisterForNavigation<DeleteItemView, DeleteItemViewModel>("ItemDeletePage");
                     container.RegisterForNavigation<HomeView, HomeViewModel>();
                 })
 				.ConfigureServices(service =>

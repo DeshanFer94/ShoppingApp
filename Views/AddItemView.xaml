@@ -11,6 +11,7 @@
                 <Entry Margin="0,40,0,20" Text="{Binding ItemPrice}" Placeholder="Enter Item Price"/>
 
                 <Button Text="Save" Command="{Binding SaveItemCommand}"/>
+               
             </VerticalStackLayout>
         </VerticalStackLayout>
 

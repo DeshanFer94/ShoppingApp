@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shopping_App.Views.DeleteItemView"
+             >
+    <VerticalStackLayout Margin="30,0">
+        <VerticalStackLayout Spacing="20">
+        <Label Text="Delete Item" FontSize="Default" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Entry Text="{Binding ItemCode}" Margin="0,40,0,0" Placeholder="Enter Item Code" />
+            <Button Text="Delete" Command="{Binding DeleteItemCommand}"/>
+
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

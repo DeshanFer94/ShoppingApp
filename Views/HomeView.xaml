@@ -10,5 +10,6 @@
             HorizontalOptions="Center" />
         <Button Text="Add Item" Command="{Binding AddItemCommand}"/>
         <Button Text="Items View" Command="{Binding GetItemCommand}"/>
+        <Button Text="Item Delete Page" Command="{Binding DeleteItemViewCommand}" />
     </VerticalStackLayout>
 </ContentPage>
